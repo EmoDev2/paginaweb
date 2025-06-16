@@ -1,0 +1,298 @@
+body {
+   background-attachment: fixed;
+    background: linear-gradient(360deg, #e8e8e8, #fafac7, #fff);
+     background-attachment: fixed;
+    font-family: Poppins;
+    margin: 0;
+}
+
+/* Importa la fuente h2 */
+@font-face {
+    font-family: 'Minecrafter';
+    src: url('fonts/Minecraft.ttf') format('truetype');
+}
+/* Importa fuente <p> */
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Regular.ttf') format('truetype');
+}
+/* Importa font de minecraft para botones*/
+@font-face {
+    font-family: 'Minecraft';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Minecraft'), url('https://fonts.cdnfonts.com/s/36662/MinecraftTen-VGORe.woff') format('woff');
+}
+@font-face {
+    font-family: 'Minecraft2';
+    src: url('fonts/Minecraft2.ttf') format('truetype');
+}
+
+
+img, p, h2, ul ,ol {
+	view-timeline-name: --image;
+	view-timeline-axis: block;
+
+	animation-timeline: --image;
+	animation-name: show;
+
+	animation-range: entry 25% cover 30%;
+	animation-fill-mode: both;
+}
+
+
+
+h1 {
+        width: 100%;
+        height: 100vh;
+        line-height: 80vh;
+        text-align: center;
+        display: block;
+        font-size: 60px;
+      }
+      .view {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      
+
+      @keyframes appear {
+        from {
+          opacity: 0;
+          clip-path: inset(100% 100% 0 0);
+        }
+        to {
+          opacity: 1;
+          clip-path: inset(0 0 0 0);
+        }
+      }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.elemento {
+    animation: fadeIn 1s ease-in-out;
+}
+      .block {
+        animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+      }
+.BhdHE7d {
+    width: 100%;
+    position: fixed;
+    z-index: 4;
+    background: linear-gradient(135deg,#d4a814, #f7e707); /*Palette */
+    padding: 7px;
+}
+
+.BhdHE7d a {
+color: aliceblue;
+font-family: Poppins, sans-serif;
+text-decoration: none;
+margin-left: 50px;
+}
+
+h2 {
+    color: #49372c;
+    font-family: Minecrafter, sans-serif;
+}
+.HhjSBa {
+    transition: transform 500ms cubic-bezier(0.075, 0.82, 0.165, 1), opacity 500ms;
+    background: url(banner.png);
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 0; /* Posición inicial arriba */
+}
+
+.hiddenBan {
+    transform: translateY(-100%); /* Mueve hacia arriba */
+    opacity: 0; /* Se desvanece */
+}
+
+/* colores de algunas fuentes opcionales*/ 
+.yellow{color: #9c840c;}
+
+.hiddeBan {
+    border: 0;
+    background: none;
+    top: 6%;
+    cursor: pointer;
+    position: absolute;
+     right: 1%;
+}
+.hidden {
+    display: none;
+}
+.general {
+    position: absolute; /* Hace que los valores de top afecten el posicionamiento */
+    top: 450px; /* Posición inicial */
+    left: 40px; /* Margen a la izquierda */
+    transition: top 500ms cubic-bezier(0.075, 0.82, 0.165, 1); /* Animación suave */
+     
+}
+.minecraftBt {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 0;
+    background-image: url("banner.png"); /* Si está dentro de 'images/' */
+
+    font-family: Minecrafter;
+}
+.fonta {
+font-family: poppins;
+font-size: 20px;
+
+
+}
+.button-java {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    background: linear-gradient(145deg, #ff8513, #7700ff) ;
+    padding: 10px;
+    border-radius: 100px;
+    border: 0;
+    color: #fff;
+    width: 230px;
+    transform: translate(-50%, -50%);
+}
+.JhdasHaOD {
+    z-index: 8;
+            width: 180px;
+            height: 100%;
+            background-color: #353016;
+            color: white;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding-top: 20px;
+        }
+
+        .uYasXnZQw {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .uYasXnZQw:hover {
+            background-color: #3d3a0e;
+        }
+
+        .KjAsdhOwQ {
+            margin-left: 210px;
+            padding: 20px;
+        }
+        
+  .big {
+    position: absolute;
+    width: 100%;
+    height: 800px;
+    top: 900px;
+  }
+    .small {
+    position: absolute;
+    width: 100%;
+    height: 800px;
+    top: 900px;
+  }
+  .fullScreen {
+    background-image: linear-gradient(rgba(0, 0, 0, 1.6), rgba(0, 0, 0, 0.6)), url(overlay.png);
+}
+.pop-up {
+    position: fixed; /* Cambiar a fixed para que quede centrado incluso con scroll */
+    top: 50%;
+    left: 50%;
+    height: 400px;
+    width: 400px; 
+    background-image: linear-gradient(160deg, #d6ddcf, #bdb77c);
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.pop-up h3  {
+    font-size: 30px;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, -50%); 
+    left: 50%;
+    top: 150px;
+}
+.pop-up img  {
+    height: 160px;
+    position: absolute;
+    
+    transform: translate(-50%, -50%); 
+    left: 50%;
+    top: 75px;
+}
+.pop-up button  {
+   
+    position: absolute;
+   
+    transform: translate(-50%, -50%); 
+    left: 50%;
+    top: 75px;
+}
+.button {
+    cursor: pointer;
+    position: fixed;
+    left: 50%;
+    top: 65%;
+    background: linear-gradient(145deg, #ff8513, #7700ff);
+    padding: 9px;
+    border-radius: 100px;
+    border: 0;
+    color: #fff;
+    width: 150px;
+    transform: translate(-50%, -50%);
+}
+
+.pop-up p  {
+    font-size: 20px;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, -50%); 
+    left: 50%;
+    font-weight: 00;
+    top: 250px;
+}
+@media (max-width: 900px) {
+ .pop-up {
+    position: fixed; /* Cambiar a fixed para que quede centrado incluso con scroll */
+    top: 50%;
+    left: 64%;
+    height: 400px;
+    width: 400px; 
+    background-image: linear-gradient(160deg, #d6ddcf, #bdb77c);
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+} 
+.button {
+    cursor: pointer;
+    position: fixed;
+    left: 64%;
+    top: 65%;
+    background: linear-gradient(145deg, #ff8513, #7700ff);
+    padding: 9px;
+    border-radius: 100px;
+    border: 0;
+    color: #fff;
+    width: 150px;
+    transform: translate(-50%, -50%);
+} 
+}
